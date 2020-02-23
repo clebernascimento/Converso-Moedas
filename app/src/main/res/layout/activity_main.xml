@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gray"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="416dp"
         android:layout_height="163dp"
-        android:background="@color/colorAzul"
+        android:background="@android:color/holo_blue_light"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,13 +44,13 @@
 
             <ImageView
                 android:id="@+id/imageReal"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/cotas" />
+                android:src="@drawable/dollar" />
 
             <TextView
                 android:id="@+id/textReal"
@@ -70,13 +71,12 @@
         android:id="@+id/materialCardView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="140dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/materialCardReal"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -153,13 +153,12 @@
         android:id="@+id/materialCardLibra"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/materialCardEuro"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -198,9 +197,9 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/colorAzul"
-        app:itemIconTint="@color/colorWhite"
-        app:itemTextColor="@color/colorWhite"
+        app:itemBackground="@color/colorWhite"
+        app:itemIconTint="@drawable/select_bottonnavigation"
+        app:itemTextColor="@drawable/select_bottonnavigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
