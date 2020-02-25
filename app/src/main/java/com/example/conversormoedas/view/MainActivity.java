@@ -1,22 +1,18 @@
-package com.example.conversormoedas;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainer;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+package com.example.conversormoedas.view;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.conversormoedas.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -28,20 +24,28 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
+        iniciando_componentes();
+
+        fragmentPrincpal();
+
+    }
+
+    public void iniciando_componentes() {
         bottomNavigationView = findViewById(R.id.bottom_navigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
     }
 
+    //Acao botoes navigation
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.home:
-
+                fragmentPrincpal();
                 break;
 
             case R.id.cotas:
-
+                getSupportFragmentManager().beginTransaction().add(R.id.container_Fragment, new CotasFragment()).commit();
                 break;
 
             case R.id.ajuda:
@@ -52,16 +56,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return true;
     }
 
+    public void fragmentPrincpal() {
+        getSupportFragmentManager().beginTransaction().add(R.id.container_Fragment, new MainFragment()).commit();
+    }
+
+
     //metodo para ação do botao voltar (<) do dispositivo
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Sair")
                 .setMessage("Deseja sair do Aplicativo ?")
-                .setPositiveButton("Sim", new DialogInterface.OnClickListener()
-                {
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
