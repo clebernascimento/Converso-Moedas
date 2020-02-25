@@ -1,4 +1,4 @@
-package com.example.conversormoedas.view.view;
+package com.example.conversormoedas.view;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conversormoedas.R;
-import com.example.conversormoedas.view.MainFragment;
+import com.example.conversormoedas.view.view.MainFragment;
 import com.example.conversormoedas.view.view.CotasFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

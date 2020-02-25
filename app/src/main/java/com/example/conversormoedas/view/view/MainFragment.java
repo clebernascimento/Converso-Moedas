@@ -1,4 +1,4 @@
-package com.example.conversormoedas.view;
+package com.example.conversormoedas.view.view;
 
 
 import android.os.Bundle;
@@ -37,7 +37,7 @@ public class MainFragment extends Fragment {
         realView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container_Fragment, new CotasFragment()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container_Fragment, new RealFragment()).commit();
             }
         });
         return view;
