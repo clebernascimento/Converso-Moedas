@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gray"
-    tools:context=".view.CotasFragment">
+    tools:context=".view.view.CotasFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout

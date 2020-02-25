@@ -1,17 +1,16 @@
-package com.example.conversormoedas.view;
+package com.example.conversormoedas.view.view;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.conversormoedas.R;
+import com.example.conversormoedas.view.MainFragment;
+import com.example.conversormoedas.view.view.CotasFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {

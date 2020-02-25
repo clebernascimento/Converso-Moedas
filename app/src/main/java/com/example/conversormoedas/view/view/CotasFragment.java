@@ -1,4 +1,4 @@
-package com.example.conversormoedas.view;
+package com.example.conversormoedas.view.view;
 
 
 import android.os.Bundle;
@@ -10,12 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.conversormoedas.R;
+import com.google.android.material.card.MaterialCardView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CotasFragment extends Fragment {
+
+
 
 
     public CotasFragment() {
@@ -27,7 +30,11 @@ public class CotasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cotas, container, false);
+       View view = inflater.inflate(R.layout.fragment_cotas, container, false);
+
+
+
+       return view;
     }
 
 }
